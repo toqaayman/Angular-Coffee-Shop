@@ -2,7 +2,7 @@
 
 You can enjoy testing and get all over the website through https://coffee-shop2022.netlify.app/ 
 
-![Website Homepage](http://url/to/img.png](https://github.com/toqaayman/Angular-Coffee-Shop/blob/main/Screenshot_2022-08-18_00-46-21.png)
+![Website Homepage](https://github.com/toqaayman/Angular-Coffee-Shop/blob/main/Screenshot_2022-08-18_00-46-21.png)
 
 
 # CoffeeShop
