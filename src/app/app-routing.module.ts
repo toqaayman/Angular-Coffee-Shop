@@ -11,7 +11,7 @@ import { AuthGuard } from './service/auth.guard';
 
 const routes: Routes = [
   { path: '', component: HomeComponent, canActivate: [AuthGuard] },
-  {path: "home", component: HomeComponent , canActivate: [AuthGuard]},
+  {path: "home", component: HomeComponent},
   {path: "product/v1/get/products", component: MenuComponent , canActivate: [AuthGuard]},
   {path: "cart", component: CartComponent , canActivate: [AuthGuard]},
   {path: "products/view/:productId", component: ViewComponent , canActivate: [AuthGuard]},
