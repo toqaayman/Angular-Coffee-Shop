@@ -25,10 +25,9 @@ export class LoginComponent implements OnInit {
     })
   }
   loginApi(){
-  return  this.http.post("https://coffeerest-skeleton.herokuapp.com/user/v1/login",{
-      email: "toqa",
-      password: "toqa"
-    },{observe: 'response', responseType: 'text'})
+  return  this.http.post("https://coffeerest-skeleton.herokuapp.com/user/v1/login",
+      this.loginForm.value
+    ,{observe: 'response', responseType: 'text'})
   }
   login(){
 

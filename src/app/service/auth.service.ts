@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { BehaviorSubject } from 'rxjs';
 import { User } from '../data/user';
+import { CartService } from '../service/cart.service'
 
 @Injectable()
 export class AuthService {
@@ -21,7 +22,8 @@ export class AuthService {
   }
 
   constructor(
-    private router: Router
+    private router: Router,
+    private cartService: CartService
   ) {}
 
   login(){
@@ -36,5 +38,7 @@ export class AuthService {
     localStorage.removeItem("token");
     this.loggedIn.next(false);
     this.router.navigate(['/login']);
+    this.cartService.removeAllCart();
+
   }
 }
