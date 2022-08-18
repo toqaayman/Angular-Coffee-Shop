@@ -19,20 +19,21 @@
           <div class="product-item">
             <a class="product-thumb" href="#"><img src="{{item.image}}" alt="Product"></a>
             <div class="product-info">
-              <h4 class="product-title"><a href="#">{{item.title}}</a></h4><span><em>Size:</em> 10.5</span><span><em>Color:</em> Dark Blue</span>
+              <h4 class="product-title"><a href="#">{{item.title}}</a></h4><span><em>Size:</em> {{item.size}}</span><span><em>Color:</em>
+              {{item.color}}</span>
             </div>
           </div>
         </td>
         <td class="text-center text-lg text-medium">{{item.price}}</td>
         <td class="text-center">
-          <button type="button" class="btn btn-danger" (click)="removeItem(item)"><i class="fa fa-trash"></i></button>
+          <button (click)="removeItem(item)" class="btn btn-danger" ><i class="fa fa-trash"></i></button>
         </td>
       </tr>
 
       </tbody>
     </table>
     <div class="shopping-cart-footer">
-      <div class="column text-lg">Subtotal: <span class="text-medium">Grand Total: ${{grandTotal}}</span></div>
+      <div class="column text-lg"><span class="text-medium">Grand Total: ${{grandTotal}}</span></div>
     </div>
     <div class="shopping-cart-footer">
       <div class="column"><button routerLink="/product/v1/get/products" class="btn btn-primary">Shop More</button></div>

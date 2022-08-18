@@ -37,14 +37,16 @@ export class CartService {
   }
 
 
-  removeCartItem(item: any):Observable<Product> {
-    const baseUrl='http://localhost:4200/product/v1/del/'+ item;
-    return this.cartItemList.splice(this.cartItemList.indexOf(item), 1)
+  removeCartItem(item: any) {
+    this.cartItemList.map((a: any, index: any) => {
+      if (item.id === a.id) {
+        this.cartItemList.splice(index, 1);
+      }
+    });
     this.itemList.next(this.cartItemList)
   }
 
   removeAllCart() {
-
     this.cartItemList = []
     this.itemList.next(this.cartItemList)
   }
